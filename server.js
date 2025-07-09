@@ -16,7 +16,7 @@ app.get('/bhavini', (req, res) => {
   res.sendFile(path.join(__dirname, 'public','index.html'));
 });
 app.get('/', (req, res) => {
-  res.write( 'HELLO, how are you');
+  res.write( 'HELLO, how are you. I am fine thank you');
   res.end();
 });
 app.listen(port)
