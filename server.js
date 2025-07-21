@@ -2,11 +2,7 @@ const express = require('express');
 const path = require('path'); // Import the path module
 
 const app = express();
-<<<<<<< HEAD
 const port = process.env.PORT || 8000;
-=======
-const port = process.env.PORT||8000;
->>>>>>> 6f682d9397976fc8f3d14becb67752ac97fc1daa
 
 // Define the directory where your static HTML files are located
 const publicPath = path.join(__dirname, 'public');
@@ -20,11 +16,7 @@ app.get('/bhavini', (req, res) => {
   res.sendFile(path.join(__dirname, 'public','index.html'));
 });
 app.get('/', (req, res) => {
-<<<<<<< HEAD
-  res.write( 'Application is deployed using codepipline and this is the first version.');
-=======
-  res.write( 'HELLO, how are you. I am fine thank u');
->>>>>>> 6f682d9397976fc8f3d14becb67752ac97fc1daa
+  res.write( 'Application is deployed using codepipline.');
   res.end();
 });
 app.listen(port)
