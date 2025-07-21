@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path'); // Import the path module
 
 const app = express();
-//const port = 3000;
+const port = process.env.PORT || 8000;
 
 // Define the directory where your static HTML files are located
 const publicPath = path.join(__dirname, 'public');
@@ -16,10 +16,10 @@ app.get('/bhavini', (req, res) => {
   res.sendFile(path.join(__dirname, 'public','index.html'));
 });
 app.get('/', (req, res) => {
-  res.write( 'HELLO, how are you');
+  res.write( 'Application is deployed using codepipline and this is the first version');
   res.end();
 });
-app.listen(8000)
+app.listen(port)
 
 /*app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
